@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Browser metadata, external fonts/icons, favicon, and the site stylesheet. -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Pizzitola Personal Portfolio Website</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3c0c0b4d49.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!----------Home / Header Section---------->
+<div id="header">
+    <div class="container">
+        <!-- Fixed navigation: desktop links, mobile drawer controls, and the Reduce Motion preference toggle. -->
+        <nav class="site-nav">
+            <a class="brand-link" href="#header" aria-label="Go to home">
+                <img src="images/logo.png" class="logo" alt="Matthew logo">
+            </a>
+            <ul id="sidemenu" aria-label="Primary navigation">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#focus">Focus</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="motion-toggle-item">
+                    <button class="motion-toggle" type="button" aria-label="Toggle reduced motion" aria-pressed="false">
+                        <i class="fa-solid fa-person-running" aria-hidden="true"></i>
+                        <span>Reduce Motion</span>
+                    </button>
+                </li>
+                <li class="mobile-menu-control">
+                    <button class="icon-button nav-close" type="button" aria-label="Close navigation menu" aria-controls="sidemenu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="icon-button nav-open" type="button" aria-label="Open navigation menu" aria-controls="sidemenu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Hero introduction and primary calls to action. -->
+        <div class="header-text">
+            <p>Recent B.A. Honours Information Technology Graduate</p>
+            <h1>Hi, I'm <span>Matthew Pizzitola</span><br>Entry-Level IT Support &amp; Systems Graduate</h1>
+            <div class="hero-actions" aria-label="Primary actions">
+                <a class="hero-cta" href="#projects">
+                    <span>View Projects</span>
+                    <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                </a>
+                <a class="hero-cta hero-cta-secondary" href="#contact">
+                    <span>Contact Me</span>
+                    <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------About Section---------->
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <!-- Portrait column. The tilt-card class lets script.js apply the subtle cursor-following hover effect. -->
+            <div class="about-col-1">
+                <img class="tilt-card" src="images/user.png" alt="Matthew Pizzitola portrait">
+            </div>
+            <div class="about-col-2">
+                <!-- About copy introduces the portfolio before the tabbed supporting details. -->
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm Matthew Pizzitola, a recent York University B.A. Honours Information Technology graduate based in Vaughan, Ontario, focused on entry-level Help Desk, IT Support, and junior systems/network roles. I bring together 3+ years of high-volume customer service experience with hands-on projects involving Windows configuration, local service setup, firewall rules, backups, networking fundamentals, service desk workflows, SQL/MySQL, front-end development, and technical documentation.</p>
+                <p>My strongest work comes from turning messy requests into clear next steps: understanding the issue, prioritizing what matters, documenting what happened, communicating updates clearly, and escalating when needed. This portfolio highlights the projects that best show how I approach troubleshooting, support workflows, network planning, database reporting, system architecture, and practical IT learning.</p>
+
+                <!-- Accessible tab controls. script.js swaps the active panel and keeps aria-selected/hidden in sync. -->
+                <div class="tab-titles" role="tablist" aria-label="About details">
+                    <button class="tab-links active-link" type="button" id="tab-skills" role="tab" aria-selected="true" aria-controls="skills" data-tab-target="skills">Skills</button>
+                    <button class="tab-links" type="button" id="tab-experience" role="tab" aria-selected="false" aria-controls="experience" data-tab-target="experience">Experience</button>
+                    <button class="tab-links" type="button" id="tab-education" role="tab" aria-selected="false" aria-controls="education" data-tab-target="education">Education</button>
+                </div>
+                <div class="about-tab-panels">
+                    <!-- Skills panel: compact capability list with matching Font Awesome icons. -->
+                    <div class="tab-contents active-tab" id="skills" role="tabpanel" aria-labelledby="tab-skills">
+                        <ul class="skill-list">
+                            <li>
+                                <span class="about-icon"><i class="fa-solid fa-headset"></i></span>
+                                <div><span>IT Support Foundations</span><br>Ticket-style triage, escalation awareness, user-focused communication, support documentation, and clear status updates.</div>
+                            </li>
+                            <li>
+                                <span class="about-icon"><i class="fa-solid fa-desktop"></i></span>
+                                <div><span>Windows &amp; Microsoft 365</span><br>Windows 10/11 troubleshooting, Office/Microsoft 365 familiarity, and basic system administration practice.</div>
+                            </li>
+                            <li>
+                                <span class="about-icon"><i class="fa-solid fa-network-wired"></i></span>
+                                <div><span>Networking Fundamentals</span><br>TCP/IP, subnetting, DHCP/DNS, VLAN/NAT concepts, firewall rules, and network documentation.</div>
+                            </li>
+                            <li>
+                                <span class="about-icon"><i class="fa-solid fa-code"></i></span>
+                                <div><span>Web Development</span><br>Responsive HTML, CSS, JavaScript, DOM work, REST/JSON integration, and debugging.</div>
+                            </li>
+                            <li>
+                                <span class="about-icon"><i class="fa-solid fa-database"></i></span>
+                                <div><span>Databases &amp; Reporting</span><br>SQL/MySQL schema design, joins, aggregations, data integrity, and Excel-based reporting.</div>
+                            </li>
+                            <li>
+                                <span class="about-icon"><i class="fa-solid fa-file-lines"></i></span>
+                                <div><span>Documentation &amp; Runbooks</span><br>Knowledge-base writing, workflow notes, requirements documentation, and repeatable troubleshooting steps.</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Experience panel: reversed vertical timeline so progress visually climbs from bottom to top. -->
+                    <div class="tab-contents" id="experience" role="tabpanel" aria-labelledby="tab-experience" hidden>
+                        <ol class="timeline timeline-reversed experience-timeline" style="--timeline-progress: 78%;">
+                            <li class="timeline-item is-future">
+                                <span class="timeline-node timeline-node-empty"><i class="fa-solid fa-headset"></i></span>
+                                <div class="timeline-content">
+                                    <span>Current Goal</span>
+                                    <h3>Entry-Level Help Desk / IT Support</h3>
+                                    <p>Seeking an entry-level Help Desk / IT Support role where I can troubleshoot user issues, document resolutions, support Windows 10/11 and Microsoft 365 environments, contribute to a knowledge base, and grow into stronger systems/network support work.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item is-complete">
+                                <span class="timeline-node"><i class="fa-solid fa-diagram-project"></i></span>
+                                <div class="timeline-content">
+                                    <span>Jun 2024 - Present</span>
+                                    <h3>Project-Based IT Experience</h3>
+                                    <p>Built support, systems, networking, web, database, and architecture projects that demonstrate troubleshooting, documentation, workflow design, data reporting, and technical implementation.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item is-complete">
+                                <span class="timeline-node"><i class="fa-solid fa-people-group"></i></span>
+                                <div class="timeline-content">
+                                    <span>May 2023 - Jun 2026</span>
+                                    <h3>Produce Clerk - Food Basics</h3>
+                                    <p>Handled 15-25+ customer and operational requests per shift in a fast-paced environment, building strong habits in prioritization, clear communication, follow-through, and escalation under pressure.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item is-complete">
+                                <span class="timeline-node"><i class="fa-solid fa-folder-open"></i></span>
+                                <div class="timeline-content">
+                                    <span>Jul 2021 - Dec 2021</span>
+                                    <h3>Office Administrator - Calder Hill Contracting Ltd.</h3>
+                                    <p>Managed 10-20 active requests per week through scheduling, correspondence, document handling, structured follow-ups, and clear stakeholder updates.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- Education panel: completed milestones are lit, while the current learning node remains unfilled. -->
+                    <div class="tab-contents" id="education" role="tabpanel" aria-labelledby="tab-education" hidden>
+                        <ol class="timeline timeline-reversed education-timeline" style="--timeline-progress: 62%;">
+                            <li class="timeline-item is-future">
+                                <span class="timeline-node timeline-node-empty"><i class="fa-solid fa-certificate"></i></span>
+                                <div class="timeline-content">
+                                    <span>Current</span>
+                                    <h3>Ongoing Learning</h3>
+                                    <p>Continuing to build practical skills through certifications, hands-on labs, portfolio projects, systems practice, documentation, and support-focused technical learning.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item is-complete">
+                                <span class="timeline-node"><i class="fa-solid fa-building-columns"></i></span>
+                                <div class="timeline-content">
+                                    <span>Sep 2022 &ndash; Jun 2026</span>
+                                    <h3>B.A. Honours Information Technology</h3>
+                                    <p>Completed a Bachelor of Arts, Honours degree in Information Technology with coursework across networks, database systems, systems analysis and design, requirements management, web technologies, and IT risk management.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item is-complete">
+                                <span class="timeline-node"><i class="fa-solid fa-school"></i></span>
+                                <div class="timeline-content">
+                                    <span>Sep 2018 &ndash; Jun 2022</span>
+                                    <h3>Emily Carr Secondary School</h3>
+                                    <p>Graduated with honours and built the academic foundation that led into my Information Technology studies at York University.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!----------Focus Section---------->
+<section id="focus">
+    <div class="container">
+        <h1 class="sub-title">Focus</h1>
+        <p class="section-kicker focus-kicker">The main areas I'm developing through projects, coursework, and hands-on practice.</p>
+        <!-- Three focus cards summarize the main skill areas and reuse the shared hover/tilt card styling. -->
+        <div class="services-list">
+            <article class="service-card tilt-card">
+                <div class="service-card-inner">
+                    <div class="service-face service-front">
+                        <i class="fa-solid fa-headset"></i>
+                        <h2>IT Support</h2>
+                        <p>Focused on user-first troubleshooting, ticket-style triage, clear status updates, escalation thinking, and practical support documentation.</p>
+                        <div class="focus-tags" aria-label="IT Support focus tags">
+                            <span>Troubleshooting</span>
+                            <span>Ticketing</span>
+                            <span>Escalation</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="service-card tilt-card">
+                <div class="service-card-inner">
+                    <div class="service-face service-front">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h2>Systems &amp; Networks</h2>
+                        <p>Building hands-on confidence with Windows 10/11, TCP/IP, subnetting, DHCP/DNS, VLAN/NAT concepts, firewall baselines, backups, and local services.</p>
+                        <div class="focus-tags" aria-label="Systems and Networks focus tags">
+                            <span>Windows</span>
+                            <span>Networking</span>
+                            <span>Firewall</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="service-card tilt-card">
+                <div class="service-card-inner">
+                    <div class="service-face service-front">
+                        <i class="fa-solid fa-database"></i>
+                        <h2>Web &amp; Data Projects</h2>
+                        <p>Using HTML, CSS, JavaScript, REST/JSON, SQL/MySQL, Excel reporting, and structured documentation to turn technical requirements into working project outcomes.</p>
+                        <div class="focus-tags" aria-label="Web and Data Projects focus tags">
+                            <span>HTML/CSS/JS</span>
+                            <span>SQL</span>
+                            <span>Reporting</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!----------Projects Section---------->
+<section id="projects">
+    <div class="container">
+        <!-- Section heading and animated search prompt. The input filters project cards in script.js. -->
+        <div class="section-heading">
+            <div>
+                <h1 class="sub-title">Projects</h1>
+                <p class="section-kicker project-kicker">A growing collection of support, systems, networking, web, database, and architecture projects.</p>
+            </div>
+            <label class="project-search" for="projectSearch">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="projectSearch" type="search" autocomplete="off" aria-label="Search projects">
+                <span class="project-search-prompt" aria-hidden="true">
+                    Search
+                    <span class="search-word-window" id="projectSearchWordWindow">
+                        <span class="search-word is-active">SwiftDesk</span>
+                    </span>
+                </span>
+            </label>
+        </div>
+
+        <!-- Masonry-style project gallery. Each card uses the same front/back structure for consistent behavior. -->
+        <div class="work-list" id="projectGrid">
+            <article class="work project-card project-feature tilt-card" data-title="SwiftDesk Help Desk Ticketing Prototype" data-tags="help desk service desk ticketing triage escalation figma documentation it support">
+                <div class="project-card-inner">
+                    <!-- Project front: thumbnail, short summary, and the flip action. -->
+                    <div class="project-face project-front">
+                        <img src="images/projects/swiftdesk/thumbnail.jpg" alt="SwiftDesk help desk prototype thumbnail">
+                        <div class="layer">
+                            <h3>SwiftDesk</h3>
+                            <p>Help desk ticketing prototype focused on triage, escalation, status tracking, and support workflow clarity.</p>
+                            <button class="project-flip" type="button" aria-label="Learn more about SwiftDesk">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Project back: detailed description, clickable gallery figures, tags, links, and return action. -->
+                    <div class="project-face project-back">
+                        <button class="project-expand" type="button">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                            <span>Expand</span>
+                        </button>
+                        <div class="project-detail-scroll">
+                            <h3>SwiftDesk</h3>
+                            <p class="project-description">A help desk / service desk workflow prototype designed to make ticket intake, priority assignment, escalation, and lifecycle visibility easier for support teams. The project models support flows across desktop and mobile contexts, including ticket creation, queue views, messaging, calendar actions, and KB/FAQ templates.</p>
+                            <div class="project-gallery" aria-label="SwiftDesk supporting images">
+                                <figure>
+                                    <img src="images/projects/swiftdesk/user-flow-map.jpg" alt="SwiftDesk user flow map showing ticket, calendar, client, FAQ, and messaging flows">
+                                    <figcaption>Task-focused user flow map covering ticket management, calendar creation, client messaging, new ticket creation, and FAQ entry creation.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projects/swiftdesk/dashboard-desktop.jpg" alt="SwiftDesk desktop dashboard concept with ticket KPIs and agent status">
+                                    <figcaption>Desktop dashboard concept showing agents on duty, ticket KPIs, and daily support priorities.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="project-tags" aria-label="Project tags">
+                                <span>Help Desk</span>
+                                <span>Service Desk</span>
+                                <span>Ticketing</span>
+                                <span>Triage</span>
+                                <span>Figma</span>
+                                <span>Documentation</span>
+                            </div>
+                            <div class="project-actions" aria-label="Project links">
+                                <a href="#contact"><i class="fa-solid fa-envelope"></i> Ask About It</a>
+                            </div>
+                        </div>
+                        <button class="icon-button project-return" type="button" aria-label="Return to SwiftDesk thumbnail">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Back</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work project-card project-wide tilt-card" data-title="Network Architecture Subnetting SD-WAN Evaluation" data-tags="networking tcp/ip subnetting vlan nat firewall sd-wan lan architecture">
+                <div class="project-card-inner">
+                    <div class="project-face project-front">
+                        <img src="images/projects/network-architecture/thumbnail.jpg" alt="Network architecture project thumbnail">
+                        <div class="layer">
+                            <h3>Network Architecture</h3>
+                            <p>Small enterprise LAN design with subnetting, VLAN/IP standards, NAT assumptions, and SD-WAN vendor evaluation.</p>
+                            <button class="project-flip" type="button" aria-label="Learn more about Network Architecture">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-face project-back">
+                        <button class="project-expand" type="button">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                            <span>Expand</span>
+                        </button>
+                        <div class="project-detail-scroll">
+                            <h3>Network Architecture</h3>
+                            <p class="project-description">Designed a 4-department LAN using access/distribution/core thinking, /26 subnetting for 62 hosts per subnet, VLAN/IP standards, NAT, and deny-by-default segmentation assumptions. The project also included a bill of materials, cost estimate, documented assumptions, and a Cisco SD-WAN vs VeloCloud evaluation against availability, latency, and scalability needs.</p>
+                            <div class="project-gallery" aria-label="Network Architecture supporting images">
+                                <figure>
+                                    <img src="images/projects/network-architecture/topology-overview.jpg" alt="Four-department LAN topology connected through a central router and firewall">
+                                    <figcaption>High-level topology showing four departmental LANs connected through core network infrastructure and an edge firewall.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="project-tags" aria-label="Project tags">
+                                <span>Networking</span>
+                                <span>TCP/IP</span>
+                                <span>Subnetting</span>
+                                <span>VLAN</span>
+                                <span>NAT</span>
+                                <span>SD-WAN</span>
+                            </div>
+                            <div class="project-actions" aria-label="Project links">
+                                <a href="#contact"><i class="fa-solid fa-envelope"></i> Ask About It</a>
+                            </div>
+                        </div>
+                        <button class="icon-button project-return" type="button" aria-label="Return to Network Architecture thumbnail">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Back</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work project-card project-tall tilt-card" data-title="Smart Buildings Architecture Availability Analysis IoT" data-tags="enterprise architecture uml iot availability mtbf mttr monitoring runbooks">
+                <div class="project-card-inner">
+                    <div class="project-face project-front">
+                        <img src="images/projects/smart-buildings/thumbnail.jpg" alt="Smart Buildings architecture project thumbnail">
+                        <div class="layer">
+                            <h3>Smart Buildings</h3>
+                            <p>IoT monitoring/control architecture with UML diagrams, availability analysis, and escalation runbook planning.</p>
+                            <button class="project-flip" type="button" aria-label="Learn more about Smart Buildings">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-face project-back">
+                        <button class="project-expand" type="button">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                            <span>Expand</span>
+                        </button>
+                        <div class="project-detail-scroll">
+                            <h3>Smart Buildings</h3>
+                            <p class="project-description">Analyzed a smart-building monitoring/control architecture for 20 tanks arranged in a 5x4 structure. The project documented the system with UML component, deployment, and sequence diagrams, calculated MTBF/MTTR from a 2024 incident log, estimated approximately 99.91% availability, and proposed heartbeat monitoring, ping checks, pub/sub alerting, and an L1 to L2 escalation runbook.</p>
+                            <div class="project-gallery" aria-label="Smart Buildings supporting images">
+                                <figure>
+                                    <img src="images/projects/smart-buildings/component-integration-view.jpg" alt="Smart Buildings component integration diagram showing control application, analytics, and edge controllers">
+                                    <figcaption>Component integration view showing the main control application coordinating analytics and edge device controllers.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projects/smart-buildings/deployment-availability-view.jpg" alt="Smart Buildings deployment and availability diagram across services, VMs, and edge nodes">
+                                    <figcaption>Deployment view mapping services, VMs, and Raspberry Pi edge nodes to availability-relevant system boundaries.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="project-tags" aria-label="Project tags">
+                                <span>Enterprise Architecture</span>
+                                <span>UML</span>
+                                <span>IoT</span>
+                                <span>MTBF</span>
+                                <span>MTTR</span>
+                                <span>Runbooks</span>
+                            </div>
+                            <div class="project-actions" aria-label="Project links">
+                                <a href="#contact"><i class="fa-solid fa-envelope"></i> Ask About It</a>
+                            </div>
+                        </div>
+                        <button class="icon-button project-return" type="button" aria-label="Return to Smart Buildings thumbnail">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Back</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work project-card project-wide tilt-card" data-title="DECORATHON Integration Architecture EIP Messaging" data-tags="system integration enterprise integration patterns eip messaging routing canonical data model architecture">
+                <div class="project-card-inner">
+                    <div class="project-face project-front">
+                        <img src="images/projects/decorathon/thumbnail.jpg" alt="DECORATHON integration architecture project thumbnail">
+                        <div class="layer">
+                            <h3>DECORATHON</h3>
+                            <p>Messaging-based integration architecture using Enterprise Integration Patterns for retail platform workflows.</p>
+                            <button class="project-flip" type="button" aria-label="Learn more about DECORATHON">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-face project-back">
+                        <button class="project-expand" type="button">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                            <span>Expand</span>
+                        </button>
+                        <div class="project-detail-scroll">
+                            <h3>DECORATHON</h3>
+                            <p class="project-description">Designed a messaging-based integration architecture for DECORATHON's retail platform using Enterprise Integration Patterns. My segment focused on System Group i, covering IGP, ORS, and SPS workflows such as sign-in/sign-up, profile updates, catalogue browsing, order submission, and status queries. The architecture uses endpoints, point-to-point channels, translators, a canonical data model, content enrichment, wire taps, splitters, routing, and aggregation.</p>
+                            <div class="project-gallery" aria-label="DECORATHON supporting images">
+                                <figure>
+                                    <img src="images/projects/decorathon/end-to-end-integration-architecture.jpg" alt="DECORATHON end-to-end integration architecture diagram">
+                                    <figcaption>End-to-end integration view connecting internal systems and external partners through messaging patterns.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projects/decorathon/igp-ors-sps-partial-architecture.jpg" alt="DECORATHON partial IGP ORS SPS integration architecture diagram">
+                                    <figcaption>Partial architecture for IGP, ORS, and SPS covering account, catalogue, order, and status flows.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="project-tags" aria-label="Project tags">
+                                <span>System Integration</span>
+                                <span>EIP</span>
+                                <span>Messaging</span>
+                                <span>Routing</span>
+                                <span>Canonical Model</span>
+                                <span>Architecture</span>
+                            </div>
+                            <div class="project-actions" aria-label="Project links">
+                                <a href="#contact"><i class="fa-solid fa-envelope"></i> Ask About It</a>
+                            </div>
+                        </div>
+                        <button class="icon-button project-return" type="button" aria-label="Return to DECORATHON thumbnail">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Back</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work project-card project-feature tilt-card" data-title="Aurora Auctions Front-End Auction Platform" data-tags="html css javascript rest json sessionStorage frontend auction dutch forward debugging">
+                <div class="project-card-inner">
+                    <div class="project-face project-front">
+                        <img src="images/projects/aurora-auctions/thumbnail.jpg" alt="Aurora Auctions front-end project thumbnail">
+                        <div class="layer">
+                            <h3>Aurora Auctions</h3>
+                            <p>Multi-page front-end auction platform with Dutch and forward auction flows, browse views, checkout, and receipt flow.</p>
+                            <button class="project-flip" type="button" aria-label="Learn more about Aurora Auctions">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-face project-back">
+                        <button class="project-expand" type="button">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                            <span>Expand</span>
+                        </button>
+                        <div class="project-detail-scroll">
+                            <h3>Aurora Auctions</h3>
+                            <p class="project-description">Built a multi-page front-end auction experience supporting Dutch and forward auction flows. The project includes multiple browse views, auction detail pages, live countdown behavior, checkout to payment to receipt flow, REST/JSON helper functions, sessionStorage persistence for expedited shipping choices, auction closeout behavior, and a timezone parsing fix for live timers.</p>
+                            <div class="project-gallery" aria-label="Aurora Auctions supporting images">
+                                <figure>
+                                    <img src="images/projects/aurora-auctions/browse-page.jpg" alt="Aurora Auctions browse page with active listings and auction information">
+                                    <figcaption>Browse page with auction cards, auction type, active status, price, countdown, and listing actions.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projects/aurora-auctions/forward-auction-bidding.jpg" alt="Aurora Auctions forward auction bidding interface">
+                                    <figcaption>Forward auction detail view with bid entry, bid history, and seller controls.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projects/aurora-auctions/dutch-auction-view.jpg" alt="Aurora Auctions Dutch auction interface">
+                                    <figcaption>Dutch auction flow showing price and auction state behavior.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projects/aurora-auctions/checkout-receipt-flow.jpg" alt="Aurora Auctions checkout payment receipt flow">
+                                    <figcaption>Checkout to payment to receipt flow with shipping selection persistence.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projects/aurora-auctions/auction-closeout.jpg" alt="Aurora Auctions auction closeout screen">
+                                    <figcaption>Auction closeout state showing the end of an auction flow and the transition toward checkout or final auction status.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="project-tags" aria-label="Project tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>REST/JSON</span>
+                                <span>sessionStorage</span>
+                                <span>Debugging</span>
+                            </div>
+                            <div class="project-actions" aria-label="Project links">
+                                <a href="https://github.com/Matthew5500/4020Project" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="#contact"><i class="fa-solid fa-envelope"></i> Ask About It</a>
+                            </div>
+                        </div>
+                        <button class="icon-button project-return" type="button" aria-label="Return to Aurora Auctions thumbnail">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Back</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work project-card project-square tilt-card" data-title="Invoice DB SQL Modelling Reporting" data-tags="sql mysql relational database schema design reporting joins aggregations data integrity">
+                <div class="project-card-inner">
+                    <div class="project-face project-front">
+                        <img src="images/projects/invoice-db/thumbnail.jpg" alt="Invoice DB project thumbnail">
+                        <div class="layer">
+                            <h3>Invoice DB</h3>
+                            <p>Relational invoice database with SQL schema design, PK/FK constraints, joins, aggregations, and reporting outputs.</p>
+                            <button class="project-flip" type="button" aria-label="Learn more about Invoice DB">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-face project-back">
+                        <button class="project-expand" type="button">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                            <span>Expand</span>
+                        </button>
+                        <div class="project-detail-scroll">
+                            <h3>Invoice DB</h3>
+                            <p class="project-description">Designed and queried a relational invoice database with Customer, Invoice, Line, and Product tables. The project used primary and foreign key constraints, typed fields, representative data loading, and reporting queries with joins and aggregations to produce invoice totals, customer spend summaries, and product rollups.</p>
+                            <div class="project-gallery" aria-label="Invoice DB supporting images">
+                                <figure>
+                                    <img src="images/projects/invoice-db/customer-balance-rollup.jpg" alt="Customer balance rollup SQL report">
+                                    <figcaption>Customer balance rollup generated with SQL filtering and aggregation.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projects/invoice-db/customer-spend-summary.jpg" alt="Customer spend summary SQL report">
+                                    <figcaption>Customer spend report generated with joins and GROUP BY across invoice tables.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="project-tags" aria-label="Project tags">
+                                <span>SQL</span>
+                                <span>MySQL</span>
+                                <span>Relational Databases</span>
+                                <span>Data Integrity</span>
+                                <span>Reporting</span>
+                                <span>Schema Design</span>
+                            </div>
+                            <div class="project-actions" aria-label="Project links">
+                                <a href="#contact"><i class="fa-solid fa-envelope"></i> Ask About It</a>
+                            </div>
+                        </div>
+                        <button class="icon-button project-return" type="button" aria-label="Return to Invoice DB thumbnail">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Back</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work project-card project-tall tilt-card" data-title="Marketplace Web App Slots Module QA Supabase" data-tags="javascript qa web testing game logic supabase debugging frontend">
+                <div class="project-card-inner">
+                    <div class="project-face project-front">
+                        <img src="images/projects/marketplace-slots/thumbnail.jpg" alt="Marketplace slots module project thumbnail">
+                        <div class="layer">
+                            <h3>Marketplace Slots</h3>
+                            <p>Vanilla JavaScript slots mini-game module with balance updates, bonus mechanics, sound settings, and manual QA.</p>
+                            <button class="project-flip" type="button" aria-label="Learn more about Marketplace Slots">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <span>Learn More</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-face project-back">
+                        <button class="project-expand" type="button">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                            <span>Expand</span>
+                        </button>
+                        <div class="project-detail-scroll">
+                            <h3>Marketplace Slots</h3>
+                            <p class="project-description">Owned development and testing for a casino-style slots mini-game module integrated into a team web app. Built Diablo's Fortune in vanilla JavaScript with a 3x3 grid, 8 symbols, 8 win-lines, adjustable bet and multiplier settings, real-time balance/stat updates, sound controls, and a Hell's Seventh Chance bonus mechanic after 5 losses. Also performed manual QA, documented defects, and validated gameplay logic across payout and edge-case scenarios.</p>
+                            <div class="project-gallery" aria-label="Marketplace Slots supporting images">
+                                <figure>
+                                    <img src="images/projects/marketplace-slots/diablos-fortune-slots-ui.jpg" alt="Diablo's Fortune slots UI with balance, bet, multiplier, and spin controls">
+                                    <figcaption>Main slots UI with balance and bet inputs, multiplier selection, and a 3x3 spinning symbol grid.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projects/marketplace-slots/hells-seventh-chance-bonus.jpg" alt="Hell's Seventh Chance bonus state screen">
+                                    <figcaption>Bonus state triggered after a 5-loss streak with a special reduced symbol set and 7x outcome.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="project-tags" aria-label="Project tags">
+                                <span>JavaScript</span>
+                                <span>QA</span>
+                                <span>Game Logic</span>
+                                <span>Supabase</span>
+                                <span>Debugging</span>
+                                <span>Front-End</span>
+                            </div>
+                            <div class="project-actions" aria-label="Project links">
+                                <a href="https://github.com/Matthew5500/Diablos-Fortune" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="#contact"><i class="fa-solid fa-envelope"></i> Ask About It</a>
+                            </div>
+                        </div>
+                        <button class="icon-button project-return" type="button" aria-label="Return to Marketplace Slots thumbnail">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Back</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Empty/search state and show-more control are toggled by the project filter logic. -->
+        <p class="empty-state" id="projectEmpty">No projects match your search.</p>
+        <button type="button" class="btn" id="seeMoreProjects">Show More Projects</button>
+    </div>
+</section>
+
+<!----------Journal Section---------->
+<section id="journal">
+    <div class="container">
+        <!-- Journal heading/search. The rotating word prompt and filtering are handled in script.js. -->
+        <div class="section-heading journal-heading">
+            <div>
+                <h1 class="sub-title">Journal</h1>
+                <p class="section-kicker journal-kicker">A space for sharing recent projects, current work, build notes, technical progress, and the lessons I&rsquo;m learning along the way.</p>
+            </div>
+            <label class="journal-search" for="journalSearch">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input id="journalSearch" type="search" autocomplete="off" aria-label="Search journal entries">
+                <span class="journal-search-prompt" aria-hidden="true">
+                    Search
+                    <span class="search-word-window" id="journalSearchWordWindow">
+                        <span class="search-word is-active">homelab</span>
+                    </span>
+                </span>
+            </label>
+        </div>
+
+        <!-- Dynamic Journal UI: filters, timeline, featured card, and blog cards are rendered from journalEntries in script.js. -->
+        <div class="journal-filters" id="journalFilters" aria-label="Journal timeline filters"></div>
+
+        <div class="journal-timeline-panel" aria-live="polite">
+            <div class="journal-timeline-summary">
+                <span id="journalTimelineLabel">All</span>
+                <strong id="journalTimelineStatus">Current progress</strong>
+            </div>
+            <div class="journal-timeline-track" id="journalTimelineTrack" style="--journal-progress: 0%;"></div>
+        </div>
+
+        <article class="journal-feature" id="journalFeature"></article>
+
+        <!-- Blog card grid and empty/show-more controls update whenever filters or search change. -->
+        <div class="journal-post-grid" id="journalPostGrid"></div>
+        <p class="visually-hidden" id="journalLikeStatus" aria-live="polite"></p>
+        <p class="empty-state" id="journalEmpty">No journal entries match your search.</p>
+        <button type="button" class="btn" id="showMoreJournal">Show More Blog Posts</button>
+    </div>
+</section>
+
+<!----------Contact Section---------->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <!-- Direct contact links, social profiles, and downloadable resume. -->
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:mattmp.04@gmail.com">mattmp.04@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:+16479840504">647-984-0504</a></p>
+                <div class="social-icons" aria-label="Social links">
+                    <a href="https://www.linkedin.com/in/matthew-pizzitola/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile in a new tab"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Matthew5500" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile in a new tab"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/Mattmp04" target="_blank" rel="noopener noreferrer" aria-label="Open X profile in a new tab"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/matthew_pizzitola/" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram profile in a new tab"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@mattmp.04?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Open TikTok profile in a new tab"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@matthewpizzitola8356" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube channel in a new tab"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <a href="Resume/Matthew_Pizzitola_Resume_2026.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <!-- Contact form posts to the Google Apps Script endpoint configured in script.js. -->
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="hidden" name="sheet_name" value="Contact Messages">
+                    <div class="honeypot-field" aria-hidden="true">
+                        <label for="contactMobileNumber">If you are human, leave this blank.</label>
+                        <input id="contactMobileNumber" type="text" name="mobile_number" tabindex="-1" autocomplete="new-password" inputmode="none" autocapitalize="none" spellcheck="false" data-lpignore="true" data-1p-ignore="true">
+                    </div>
+                    <div class="form-field">
+                        <label for="contactName">Name</label>
+                        <input id="contactName" type="text" name="name" placeholder="Your Name" autocomplete="name" minlength="2" maxlength="50" pattern="^[A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u00FF' .-]{2,50}$" title="Please enter a valid name using letters, spaces, apostrophes, hyphens, or periods only." required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contactEmail">Email</label>
+                        <input id="contactEmail" type="email" name="email" placeholder="Your Email" autocomplete="email" maxlength="100" title="Please enter a valid email address." required>
+                    </div>
+                    <div class="form-field">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" name="message" rows="6" placeholder="Your Message" minlength="10" maxlength="1000" title="Please enter a message between 10 and 1000 characters." required></textarea>
+                    </div>
+                    <span id="msg" class="form-status" role="status" aria-live="polite"></span>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; 2026 Matthew Pizzitola. All rights reserved.</p>
+    </div>
+</section>
+
+<!----------Site JavaScript---------->
+<script src="script.js" defer></script>
+</body>
+</html>
